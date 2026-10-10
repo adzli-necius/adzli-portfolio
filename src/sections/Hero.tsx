@@ -5,15 +5,15 @@ export function Hero() {
     <section className="hero-section" id="home">
       <div className="container hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">SOFTWARE ENGINEER Â· FREELANCE DEVELOPER</p>
+          <p className="eyebrow">SOFTWARE ENGINEER / FREELANCE DEVELOPER</p>
           <h1>
-            Hi, I'm Adzli.
+            Hi, I&apos;m Adzli.
             <br />
             Building Software for <em>Real-World Problems.</em>
           </h1>
           <p className="hero-description">
-            I'm a Java developer specializing in Spring Boot, REST APIs, and
-            full-stack web applications. I contribute to enterprise software
+            I&apos;m a Java developer specializing in Spring Boot, REST APIs,
+            and full-stack web applications. I contribute to enterprise software
             systems and independently develop practical digital solutions for
             businesses.
           </p>
@@ -40,14 +40,11 @@ export function Hero() {
           aria-label="Developer architecture illustration"
         >
           <div className="hero-visual__grid" />
-          <div className="hero-visual__badge">
-            <span>JAVA</span>
-            <small>
-              BACKEND
-              <br />
-              ENGINEERING
-            </small>
-          </div>
+          <img
+            className="hero-visual__profile"
+            src="/images/profile/adzli-avatar.png"
+            alt="Illustrated portrait of Muhammad Adzli"
+          />
           <div className="hero-visual__architecture" aria-hidden="true">
             <span>CLIENT</span>
             <i />
