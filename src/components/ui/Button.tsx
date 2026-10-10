@@ -1,3 +1,4 @@
+import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
@@ -12,11 +13,10 @@ export function Button({
   ...props
 }: ButtonProps) {
   const buttonClassName = `button button--${variant} ${className}`.trim();
-
   return (
     <a className={buttonClassName} {...props}>
       <span>{children}</span>
-      <span aria-hidden="true">{"\u2197"}</span>
+      <ArrowOutwardRoundedIcon aria-hidden="true" fontSize="small" />
     </a>
   );
 }

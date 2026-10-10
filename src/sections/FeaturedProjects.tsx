@@ -1,3 +1,4 @@
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
 import { SectionTitle } from "../components/ui/SectionTitle";
@@ -47,7 +48,7 @@ export function FeaturedProjects() {
               aria-label="Close project details"
               onClick={() => setSelectedProject(null)}
             >
-              ×
+              <CloseRoundedIcon aria-hidden="true" />
             </button>
             <p className="project-card__number">
               {selectedProject.index} / {selectedProject.status}

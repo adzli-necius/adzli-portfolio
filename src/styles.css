@@ -882,3 +882,12 @@ em {
     left: 10%;
   }
 }
+
+.social-row a,
+.footer__links a,
+.project-widget__action,
+.nav__resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
