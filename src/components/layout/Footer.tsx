@@ -1,4 +1,4 @@
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 export function Footer() {
   return (
@@ -9,15 +9,15 @@ export function Footer() {
         </a>
 
         <p>
-          {'\u00A9'} {currentYear} Muhammad Adzli. All rights reserved.
+          {"\u00A9"} {currentYear} Muhammad Adzli. All rights reserved.
         </p>
 
         <div className="footer__links" aria-label="Social links">
-          <a href="#github">GitHub</a>
+          <a href="https://github.com/adzli-necius">GitHub</a>
           <a href="#linkedin">LinkedIn</a>
-          <a href="#email">Email</a>
+          <a href="mailto:muhdadzlijefry@gmail.com">Email</a>
         </div>
       </div>
     </footer>
-  )
+  );
 }
