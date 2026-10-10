@@ -1,3 +1,6 @@
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import { useState } from "react";
 const navLinks = [
   { label: "Projects", href: "#projects" },
@@ -24,8 +27,11 @@ export function Navbar() {
           onClick={() => setIsOpen((open) => !open)}
         >
           <span className="sr-only">Toggle navigation</span>
-          <span />
-          <span />
+          {isOpen ? (
+            <CloseRoundedIcon aria-hidden="true" />
+          ) : (
+            <MenuRoundedIcon aria-hidden="true" />
+          )}
         </button>
         <nav
           id="primary-navigation"
@@ -42,7 +48,8 @@ export function Navbar() {
             ))}
           </ul>
           <a className="nav__resume" href="#resume" onClick={closeMenu}>
-            Download Resume <span aria-hidden="true">↓</span>
+            Download Resume{" "}
+            <DownloadRoundedIcon aria-hidden="true" fontSize="small" />
           </a>
         </nav>
       </div>

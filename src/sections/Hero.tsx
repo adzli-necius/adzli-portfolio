@@ -1,5 +1,7 @@
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import MailOutlineRoundedIcon from "@mui/icons-material/MailOutlineRounded";
 import { Button } from "../components/ui/Button";
-
 export function Hero() {
   return (
     <section className="hero-section" id="home">
@@ -28,9 +30,14 @@ export function Hero() {
           </div>
           <div className="social-row">
             <span>CONNECT</span>
-            <a href="https://github.com/adzli-necius">GitHub</a>
-            <a href="#linkedin">LinkedIn</a>
+            <a href="https://github.com/adzli-necius">
+              <GitHubIcon aria-hidden="true" fontSize="small" /> GitHub
+            </a>
+            <a href="#linkedin">
+              <LinkedInIcon aria-hidden="true" fontSize="small" /> LinkedIn
+            </a>
             <a href="mailto:muhdadzlijefry@gmail.com?subject=Hiring%20opportunity%20for%20Adzli">
+              <MailOutlineRoundedIcon aria-hidden="true" fontSize="small" />{" "}
               Email
             </a>
           </div>
