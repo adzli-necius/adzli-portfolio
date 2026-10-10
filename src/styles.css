@@ -862,3 +862,23 @@ em {
     grid-template-columns: 1fr;
   }
 }
+
+.hero-visual__profile {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 12%;
+  width: 50%;
+  aspect-ratio: 0.67;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid #4a4944;
+  box-shadow: 12px 12px 0 var(--color-accent);
+}
+
+@media (max-width: 560px) {
+  .hero-visual__profile {
+    width: 55%;
+    left: 10%;
+  }
+}
