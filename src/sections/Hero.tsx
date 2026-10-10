@@ -16,7 +16,7 @@ export function Hero() {
           <p className="hero-description">
             I'm Muhammad Adzli, a software developer focused on building
             backend systems and web applications using Java, Spring Boot and
-            modern web technologies. also im gay lol
+            modern web technologies.
           </p>
 
           <div className="hero-actions">
