@@ -1,18 +1,18 @@
-import { useEffect, useState } from 'react'
-import { Home } from './pages/Home'
-import { ManageContent } from './pages/ManageContent'
+import { useEffect, useState } from "react";
+import { Home } from "./pages/Home";
+import { ManageContent } from "./pages/ManageContent";
 
 function App() {
-  const [hash, setHash] = useState(window.location.hash)
+  const [hash, setHash] = useState(window.location.hash);
 
   useEffect(() => {
-    const handleHashChange = () => setHash(window.location.hash)
-    window.addEventListener('hashchange', handleHashChange)
+    const handleHashChange = () => setHash(window.location.hash);
+    window.addEventListener("hashchange", handleHashChange);
 
-    return () => window.removeEventListener('hashchange', handleHashChange)
-  }, [])
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
-  return hash === '#manage' ? <ManageContent /> : <Home />
+  return hash === "#manage" ? <ManageContent /> : <Home />;
 }
 
-export default App
+export default App;

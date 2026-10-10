@@ -1,5 +1,5 @@
 export interface Article {
-  title: string
-  category: string
-  status: 'Planned' | 'Draft'
+  title: string;
+  category: string;
+  status: "Planned" | "Draft";
 }

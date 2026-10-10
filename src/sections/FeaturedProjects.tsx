@@ -1,24 +1,17 @@
-import { useState } from 'react'
-import { ProjectCard } from '../components/ProjectCard'
-import { SectionTitle } from '../components/ui/SectionTitle'
-import { projects as defaultProjects } from '../data/projects'
-import { useStoredCollection } from '../hooks/useStoredCollection'
-import type { Project } from '../types/project'
-
+import { useState } from "react";
+import { ProjectCard } from "../components/ProjectCard";
+import { SectionTitle } from "../components/ui/SectionTitle";
+import { projects } from "../data/projects";
+import type { Project } from "../types/project";
 export function FeaturedProjects() {
-  const { items: projects } = useStoredCollection<Project>(
-    'portfolio-projects',
-    defaultProjects,
-  )
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
-
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   return (
     <section className="section projects" id="projects">
       <div className="container">
         <div className="projects__heading">
           <SectionTitle
-            eyebrow="SELECTED WORK"
-            title="Projects I've Built."
+            eyebrow="FEATURED PROJECTS"
+            title="Software with purpose."
             light
           />
           <p>
@@ -26,7 +19,6 @@ export function FeaturedProjects() {
             code, and dependable behavior.
           </p>
         </div>
-
         <div className="project-widgets">
           {projects.map((project) => (
             <ProjectCard
@@ -37,7 +29,6 @@ export function FeaturedProjects() {
           ))}
         </div>
       </div>
-
       {selectedProject && (
         <div
           className="project-dialog"
@@ -56,23 +47,30 @@ export function FeaturedProjects() {
               aria-label="Close project details"
               onClick={() => setSelectedProject(null)}
             >
-              {'\u00D7'}
+              ×
             </button>
-
             <p className="project-card__number">
-              {selectedProject.index} / PROJECT
+              {selectedProject.index} / {selectedProject.status}
             </p>
             <h3 id="project-dialog-title">{selectedProject.title}</h3>
-            <p>{selectedProject.description}</p>
-
+            <p>{selectedProject.caseStudy}</p>
             <ul className="tags" aria-label="Technologies">
               {selectedProject.technologies.map((technology) => (
                 <li key={technology}>{technology}</li>
               ))}
             </ul>
+            <div className="project-links">
+              <span>Case study</span>
+              {selectedProject.githubUrl && (
+                <a href={selectedProject.githubUrl}>GitHub</a>
+              )}
+              {selectedProject.liveUrl && (
+                <a href={selectedProject.liveUrl}>Live demo</a>
+              )}
+            </div>
           </article>
         </div>
       )}
     </section>
-  )
+  );
 }
